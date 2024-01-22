@@ -16,16 +16,10 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: root
-  password: postgres
-  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  username: root
-  password: postgres
-  database: visa-consultancy_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -83,6 +77,6 @@ test:
 #
 production:
   <<: *default
-  database: visa-consultancy_production
-  username: pampers
+  database: <%= ENV["VISA_CONSULTANCY_DATABASE_DATABASE"] %>
+  username: <%= ENV["VISA_CONSULTANCY_DATABASE_USERNAME"] %>
   password: <%= ENV["VISA_CONSULTANCY_DATABASE_PASSWORD"] %>
