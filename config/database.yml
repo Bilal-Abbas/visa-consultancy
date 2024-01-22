@@ -77,6 +77,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV["VISA_CONSULTANCY_DATABASE_DATABASE"] %>
-  username: <%= ENV["VISA_CONSULTANCY_DATABASE_USERNAME"] %>
-  password: <%= ENV["VISA_CONSULTANCY_DATABASE_PASSWORD"] %>
+  database: <%= Rails.application.credentials["DATABASE"] %>
+  username: <%= Rails.application.credentials["USERNAME"] %>
+  password: <%= Rails.application.credentials["PASSWORD"] %>
