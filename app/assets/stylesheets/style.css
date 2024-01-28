@@ -523,6 +523,10 @@ a:focus {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
   position: relative;
   margin-left: -45px;
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    margin-left: unset;
+  }
 }
 
 .about_section .detail-box p {
