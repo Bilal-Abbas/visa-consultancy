@@ -32,4 +32,4 @@
 
 /config/database.yml
 /db/seeds.rb
-/config/credentials*
+/config/credentials.yml.enc
