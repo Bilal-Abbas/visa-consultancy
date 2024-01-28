@@ -197,6 +197,18 @@ body {
 .header_bottom {
   padding: 10px 0;
 }
+.header_section .navbar-brand{
+  @media (max-width: 768px) {
+    margin-right: unset;
+  }
+}
+.header_section .navbar-brand span{
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    margin-right: unset;
+  }
+}
 
 #navbarSupportedContent {
   -webkit-box-pack: justify;
@@ -848,6 +860,9 @@ a:focus {
 .info_section .info_logo .navbar-brand span {
   font-size: 20px;
   color: #ffffff;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 }
 
 .info_section .info_links ul {
